@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpai-lab"
+version = "0.1.0"
+description = "CPAI研究室の共通Pythonライブラリ(環境・方策・エージェント・ユーティリティ)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "CPAI Lab, Osaka Institute of Technology" }]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+]
+
+[project.urls]
+Repository = "https://github.com/oit-cpai/lab-core"
+
+[tool.setuptools.packages.find]
+where = ["src"]
