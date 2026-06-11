@@ -29,3 +29,20 @@ def naive_epsilon_greedy_policy(Q, epsilon=0.1):
     best_action = np.argmax(Q)
     policy[best_action] += 1.0 - epsilon
     return policy
+
+def sample_action(Q_s, epsilon=0.1, rng=None):
+    """Sample one action from the epsilon-greedy distribution.
+
+    Parameters
+    ----------
+    Q_s : array_like, shape (n_actions,)
+        Q-values for the current state.
+    epsilon : float
+        Exploration rate.
+    rng : numpy.random.Generator or None
+        Random number generator.
+    """
+    if rng is None:
+        rng = np.random.default_rng()
+    probs = epsilon_greedy_policy(np.asarray(Q_s), epsilon)
+    return int(rng.choice(len(probs), p=probs))
