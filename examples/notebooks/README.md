@@ -6,6 +6,7 @@
 |---|---|---|
 | `bandit_lecture.ipynb` | バンディット問題(ε-greedy・Q値更新・UCB) | `reinforcement-learning/bandit.md` |
 | `cliff_walking_lecture.ipynb` | TD学習(SARSA・Q-learning・Expected SARSA) | `reinforcement-learning/cliff-walking.md` |
+| `gridworld_step_exercise.ipynb` | 環境を作る:`step()` を自作し既存エージェントにつなぐ | `reinforcement-learning/gridworld-step.md` |
 
 ## 使い方
 
