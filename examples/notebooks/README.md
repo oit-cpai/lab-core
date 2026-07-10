@@ -12,6 +12,11 @@
 | `dqn_cartpole.ipynb` | DQN(replay buffer・target network、PyTorch/Colab推奨) | `reinforcement-learning/dqn.md` |
 | `arm_kinematics.ipynb` | 2リンクアームの運動学(FK・IK・ヤコビアン・特異点) | `robotics/kinematics.md` |
 | `diff_drive.ipynb` | 差動二輪の運動学と経路追従(デッドレコニング・pure pursuit) | `robotics/mobile-robots.md` |
+| `polynomial_regression.ipynb` | 多項式回帰と過学習(正規方程式・ridge・交差検証) | `machine-learning/ml-basics.md`・`linear-regression.md` |
+| `logistic_regression.ipynb` | ロジスティック回帰(交差エントロピー・勾配降下) | `machine-learning/classification.md` |
+| `kmeans_gmm.ipynb` | k-meansとGMM+EM(負担率・対数尤度の単調増加) | `machine-learning/clustering.md` |
+| `pca.ipynb` | 主成分分析(固有分解・寄与率・再構成誤差) | `machine-learning/dimensionality-reduction.md` |
+| `mlp_backprop.ipynb` | MLPと誤差逆伝播のnumpy実装(勾配チェック込み) | `deep-learning/nn-basics.md`・`backprop.md` |
 
 ## 使い方
 
