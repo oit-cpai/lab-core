@@ -17,6 +17,7 @@
 | `kmeans_gmm.ipynb` | k-meansとGMM+EM(負担率・対数尤度の単調増加) | `machine-learning/clustering.md` |
 | `pca.ipynb` | 主成分分析(固有分解・寄与率・再構成誤差) | `machine-learning/dimensionality-reduction.md` |
 | `mlp_backprop.ipynb` | MLPと誤差逆伝播のnumpy実装(勾配チェック込み) | `deep-learning/nn-basics.md`・`backprop.md` |
+| `experiment_template.ipynb` | 卒研の実験テンプレート:Google Driveへの結果保存(条件・ログ・図・要約)と卒研repo用ファイルの書き出し。FrozenLakeのQ学習を例に、環境・手法を置き換えて使う | `technical-handbook/colab/experiment-workflow.md`(技術手順) |
 
 ## 使い方
 
