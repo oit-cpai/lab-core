@@ -1,0 +1,50 @@
+name: validate-notebooks
+
+# 学生用穴埋めnotebookの健全性チェック。
+# 穴埋め版は意図的に未完成なので「実行」はせず、以下を検査する:
+# 1. JSONとして正しいnotebookであること
+# 2. 穴埋めマーカー(---- ここから課題 ----)が対で存在すること
+
+on:
+  push:
+    paths:
+      - "examples/notebooks/**"
+      - ".github/workflows/validate-notebooks.yml"
+  pull_request:
+    paths:
+      - "examples/notebooks/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate notebooks
+        run: |
+          python - <<'EOF'
+          import json, glob, sys
+          bad = []
+          for p in sorted(glob.glob("examples/notebooks/*.ipynb")):
+              try:
+                  nb = json.load(open(p, encoding="utf-8"))
+                  assert nb.get("nbformat") == 4 and "cells" in nb, "invalid nbformat"
+                  src = "\n".join(
+                      c["source"] if isinstance(c["source"], str) else "".join(c["source"])
+                      for c in nb["cells"] if c["cell_type"] == "code")
+                  starts = src.count("---- ここから課題")
+                  ends = src.count("---- ここまで ----")
+                  if starts != ends:
+                      raise AssertionError(f"課題マーカーが非対称: start={starts}, end={ends}")
+                  print(f"OK {p} (課題区間 {starts})")
+              except Exception as e:
+                  bad.append((p, str(e)))
+          if bad:
+              print("NG:", bad); sys.exit(1)
+          EOF
