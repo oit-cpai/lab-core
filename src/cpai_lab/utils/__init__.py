@@ -1,6 +1,7 @@
 """Shared utilities (misc helpers and plotting)."""
 
 from .misc import argmax_random_tie
+from .experiment import ExperimentRun
 from .plotting import (
     plot_epsilon_greedy_policy,
     plot_boltzmann_policy,
@@ -12,6 +13,7 @@ from .plotting import (
 
 __all__ = [
     "argmax_random_tie",
+    "ExperimentRun",
     "plot_epsilon_greedy_policy",
     "plot_boltzmann_policy",
     "compare_policies",

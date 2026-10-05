@@ -35,6 +35,15 @@ from cpai_lab.agents import value_based_method, run_experiment
 from cpai_lab.utils import plot_epsilon_greedy_policy
 ```
 
+卒研の共通部品:
+
+```python
+from cpai_lab import GridMazeEnv, generate_maze, maze_stats   # 格子迷路
+from cpai_lab import value_iteration                           # 動的計画法(検算用)
+from cpai_lab import ActionDelay                               # 入力遅れのラッパー
+from cpai_lab import ExperimentRun                             # 実験結果の保存
+```
+
 トップレベルからの一括importも可能:
 
 ```python
@@ -49,10 +58,12 @@ lab-core/
   requirements.txt
   src/
     cpai_lab/
-      envs/        # 環境(GaussianBandit など)
+      envs/        # 環境(GaussianBandit、格子迷路 GridMazeEnv)
       policies/    # 行動選択方策(ε-greedy, Boltzmann, UCB)
-      agents/      # 学習メソッド・実験ランナー
-      utils/       # 可視化・共通ユーティリティ
+      agents/      # 学習メソッド・実験ランナー・動的計画法
+      wrappers/    # 既存環境に機能を足す部品(入力遅れ ActionDelay)
+      utils/       # 可視化・実験結果の保存(ExperimentRun)
+  tests/           # 共通部品のテスト(pytest)
   examples/
     notebooks/     # 学生向けサンプル・演習notebook
   RLbasic/         # (整理中)旧教育用notebook

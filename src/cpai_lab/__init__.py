@@ -3,9 +3,9 @@
 Convenience imports so that ``from cpai_lab import GaussianBandit`` works.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
-from .envs import GaussianBandit
+from .envs import GaussianBandit, GridMazeEnv, generate_maze, maze_stats
 from .policies import (
     epsilon_greedy_policy,
     naive_epsilon_greedy_policy,
@@ -21,7 +21,10 @@ from .agents import (
     TD_METHODS,
     compute_td_error,
     train_td,
+    value_iteration,
+    policy_evaluation,
 )
+from .wrappers import ActionDelay
 from .utils import (
     argmax_random_tie,
     plot_epsilon_greedy_policy,
@@ -30,10 +33,18 @@ from .utils import (
     smooth,
     plot_learning_curves,
     plot_cliff_policy,
+    ExperimentRun,
 )
 
 __all__ = [
     "GaussianBandit",
+    "GridMazeEnv",
+    "generate_maze",
+    "maze_stats",
+    "ActionDelay",
+    "value_iteration",
+    "policy_evaluation",
+    "ExperimentRun",
     "argmax_random_tie",
     "epsilon_greedy_policy",
     "naive_epsilon_greedy_policy",

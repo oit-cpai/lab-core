@@ -6,6 +6,7 @@ from .bandit import (
     ucb_method,
     run_experiment,
 )
+from .dp import value_iteration, policy_evaluation
 from .td import (
     TD_METHODS,
     compute_td_error,
@@ -20,4 +21,6 @@ __all__ = [
     "TD_METHODS",
     "compute_td_error",
     "train_td",
+    "value_iteration",
+    "policy_evaluation",
 ]
