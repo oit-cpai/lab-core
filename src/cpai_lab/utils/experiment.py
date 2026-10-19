@@ -1,13 +1,13 @@
 """実験結果の保存(Google Drive / ローカル)。
 
 ``technical-handbook/colab/experiment-workflow.md`` の保存手順を関数にまとめたもの。
-1回の実行ごとに ``<保存先>/<学籍番号>/<日付_時刻_実験名>/`` を作り、
+1回の実行ごとに ``<保存先>/<卒研repo名>/<日付_時刻_実験名>/`` を作り、
 設定・ログ・図・要約を同じ形式で残す。
 
 使い方
 ------
 >>> from cpai_lab.utils.experiment import ExperimentRun
->>> run = ExperimentRun("e16xxxxx", "qlearning_maze", config={"alpha": 0.1, "seeds": [0, 1, 2]})
+>>> run = ExperimentRun("e1xxxxxx", "qlearning_maze", config={"alpha": 0.1, "seeds": [0, 1, 2]})
 >>> run.log(seed=0, episode=0, ret=-0.3, steps=31)     # 1行ずつ metrics.csv に追記
 >>> run.save_figure(fig, "learning_curve")              # learning_curve.png
 >>> run.save_summary([{"seed": 0, "success_rate": 0.9}]) # summary.csv
@@ -43,7 +43,7 @@ class ExperimentRun:
     Parameters
     ----------
     student_id : str
-        学籍番号(卒研repo名。例 ``"e1623049"``)。
+        卒研repo名(大学のメールアドレスの ``@`` より前。例 ``"e1623049"``)。
     experiment : str
         実験名。半角英小文字と ``_`` で(例 ``"qlearning_maze"``)。
     config : dict
