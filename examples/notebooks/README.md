@@ -2,6 +2,28 @@
 
 学生向けの演習notebook置き場。
 
+> [!WARNING]
+> **このフォルダの演習 notebook は、2027年3月末(いまの4年生の卒業)のあとに削除する。**
+>
+> 基礎の演習は、研究の基礎コース [`cpai-foundations`](https://github.com/oit-cpai/cpai-foundations) に、新しい単元として作り直している。新しい単元では、NumPy・Matplotlib・SciPy で自分で実装し、最後に `cpai_lab` との関係を学ぶ。
+>
+> - **3年生(早期配属)**:このフォルダの notebook ではなく、`cpai-foundations` の単元を使う。単元ができるまでは、学習のロードマップの指示に従う。
+> - **4年生**:卒研で使っている notebook は、卒業まで、このまま使ってよい。自分の卒研 repo にコピーしたものは消えない。
+> - **卒研の実験のテンプレート `experiment_template.ipynb`** は、`cpai_lab` の使い方の例として、このフォルダに残す。
+
+| いまの notebook | 移る先(cpai-foundations の単元) |
+|---|---|
+| `bandit_lecture` | R1 探索と活用(バンディット) |
+| `gridworld_step_exercise` | R2 環境を作る |
+| `dp_gridworld` | R4 動的計画法 |
+| `cliff_walking_lecture` | R7 TD学習・Sarsa・Q学習 |
+| `arm_kinematics` | K1 順運動学、K2 解析的な逆運動学、K4 数値逆運動学 |
+| `polynomial_regression` | S4 多項式回帰・リッジ回帰と過学習 |
+| `logistic_regression` | S5 ロジスティック回帰と分類 |
+| `reinforce_cartpole`、`dqn_cartpole`、`diff_drive`、`kmeans_gmm`、`pca`、`mlp_backprop` | 発展の教材。扱いは、決まりしだいここで知らせる |
+
+`cpai-foundations` の単元ができたら、上の表に単元へのリンクを加える。
+
 | notebook | 内容 | 解説資料(research-handbook) |
 |---|---|---|
 | `bandit_lecture.ipynb` | バンディット問題(ε-greedy・Q値更新・UCB) | `reinforcement-learning/bandit.md` |

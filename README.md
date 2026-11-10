@@ -10,6 +10,9 @@ CPAI研究室の**演習・実験用notebook**と、それらが使う共通Pyth
 | [`src/cpai_lab/`](src/cpai_lab/) | 演習notebookが使う共通ライブラリ(環境・方策・エージェント・可視化) |
 | `RLbasic/` | 旧教育資料(整理中) |
 
+> [!WARNING]
+> `examples/notebooks/` の演習 notebook は、2027年3月末(いまの4年生の卒業)のあとに削除し、研究の基礎コース [`cpai-foundations`](https://github.com/oit-cpai/cpai-foundations) に移す。lab-core は、共通ライブラリ `cpai_lab` とその使い方の説明を置く repo にする。詳しくは [`examples/notebooks/README.md`](examples/notebooks/README.md)。
+
 notebookは直接編集せず、**自分の卒研repoにコピーして使ってください**。手順は `technical-handbook/colab/use-github-repo.md` にあります。
 
 ## インストール
