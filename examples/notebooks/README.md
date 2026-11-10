@@ -17,7 +17,7 @@
 | `gridworld_step_exercise` | R2 環境を作る |
 | `dp_gridworld` | R4 動的計画法 |
 | `cliff_walking_lecture` | R7 TD学習・Sarsa・Q学習 |
-| `arm_kinematics` | K1 順運動学、K2 解析的な逆運動学、K4 数値逆運動学 |
+| `arm_kinematics` | [K1 順運動学](https://github.com/oit-cpai/cpai-foundations/blob/main/kinematics/01-forward-kinematics.md)・[K2 解析的な逆運動学](https://github.com/oit-cpai/cpai-foundations/blob/main/kinematics/02-inverse-kinematics.md)(作成済み)、K4 数値逆運動学 |
 | `polynomial_regression` | S4 多項式回帰・リッジ回帰と過学習 |
 | `logistic_regression` | S5 ロジスティック回帰と分類 |
 | `reinforce_cartpole`、`dqn_cartpole`、`diff_drive`、`kmeans_gmm`、`pca`、`mlp_backprop` | 発展の教材。扱いは、決まりしだいここで知らせる |
