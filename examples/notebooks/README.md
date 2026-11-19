@@ -14,8 +14,8 @@
 | いまの notebook | 移る先(cpai-foundations の単元) |
 |---|---|
 | `bandit_lecture` | R1 探索と活用(バンディット) |
-| `gridworld_step_exercise` | R2 環境を作る |
-| `dp_gridworld` | R4 動的計画法 |
+| `gridworld_step_exercise` | [R2 環境を作る](https://github.com/oit-cpai/cpai-foundations/blob/main/rl/02-environment-step.md)(作成済み) |
+| `dp_gridworld` | [R4 動的計画法](https://github.com/oit-cpai/cpai-foundations/blob/main/rl/04-dynamic-programming.md)(作成済み) |
 | `cliff_walking_lecture` | R7 TD学習・Sarsa・Q学習 |
 | `arm_kinematics` | [K1 順運動学](https://github.com/oit-cpai/cpai-foundations/blob/main/kinematics/01-forward-kinematics.md)・[K2 解析的な逆運動学](https://github.com/oit-cpai/cpai-foundations/blob/main/kinematics/02-inverse-kinematics.md)(作成済み)、K4 数値逆運動学 |
 | `polynomial_regression` | S4 多項式回帰・リッジ回帰と過学習 |
